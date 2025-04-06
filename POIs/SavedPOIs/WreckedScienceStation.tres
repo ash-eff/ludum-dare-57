@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="POIResource" load_steps=2 format=3 uid="uid://dbtgaqgq14uk3"]
+
+[ext_resource type="Script" path="res://POIs/POIResource.gd" id="1_c18kj"]
+
+[resource]
+script = ExtResource("1_c18kj")
+title = "Unnamed POI"
+description = ""
+rooms = Array[Resource]([])

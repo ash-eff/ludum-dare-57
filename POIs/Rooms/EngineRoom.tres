@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Room" load_steps=3 format=3 uid="uid://c47ygych6aumq"]
+
+[ext_resource type="Script" path="res://POIs/RoomOption.gd" id="1_nck4t"]
+[ext_resource type="Script" path="res://POIs/Room.gd" id="2_6lmcl"]
+
+[resource]
+script = ExtResource("2_6lmcl")
+name = "Engine Room"
+description = "The heart of the ship. "
+options = Array[ExtResource("1_nck4t")]([])

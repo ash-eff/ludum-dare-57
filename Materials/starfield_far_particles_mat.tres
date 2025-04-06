@@ -1,0 +1,11 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://chu24ofs3p2yv"]
+
+[resource]
+emission_shape = 3
+emission_box_extents = Vector3(1280, 720, 1)
+direction = Vector3(0, 0, 0)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.3
+scale_max = 1.2
+color = Color(1.73271e-06, 0.748039, 0.74806, 1)

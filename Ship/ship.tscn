@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bavp26qu64ff0"]
+
+[ext_resource type="Script" path="res://Ship/ship.gd" id="1_k48wp"]
+[ext_resource type="Texture2D" uid="uid://d1ugsu6d07xeu" path="res://Art/space_ship.png" id="2_7mx76"]
+[ext_resource type="PackedScene" uid="uid://d0ui7ih1kpgry" path="res://Beacons/beacon_tracker.tscn" id="3_3a6gq"]
+
+[node name="Ship" type="CharacterBody2D"]
+script = ExtResource("1_k48wp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7mx76")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="BeaconTracker" parent="." instance=ExtResource("3_3a6gq")]
+scan_distance = 1000.0
+screen_margin = 20.0

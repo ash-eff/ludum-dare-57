@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Room" load_steps=3 format=3 uid="uid://cudee75jqowaq"]
+
+[ext_resource type="Script" path="res://POIs/RoomOption.gd" id="1_hha7c"]
+[ext_resource type="Script" path="res://POIs/Room.gd" id="2_l8vwo"]
+
+[resource]
+script = ExtResource("2_l8vwo")
+name = "Crew's Quarters"
+description = "A 3 x 2 meter room with 3 bunks and a set of lockers."
+options = Array[ExtResource("1_hha7c")]([])

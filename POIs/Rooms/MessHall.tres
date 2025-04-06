@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Room" load_steps=3 format=3 uid="uid://dfdopc3cijxal"]
+
+[ext_resource type="Script" path="res://POIs/RoomOption.gd" id="1_17ow7"]
+[ext_resource type="Script" path="res://POIs/Room.gd" id="2_tc31i"]
+
+[resource]
+script = ExtResource("2_tc31i")
+name = "Mess Hall"
+description = "A place for the residents of this vessel to congregate and share a meal."
+options = Array[ExtResource("1_17ow7")]([])

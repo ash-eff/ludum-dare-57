@@ -1,0 +1,17 @@
+{
+  "engine room": [
+	"You explore the engine room and find a dead body holding a case. You open the box.",
+	"You explore the engine room and find a seized engine, however, there are a few parts you can salvage, but it will take some time to remove them.",
+	"You explore the engine room and find one lone crew member. They seem unconscious.",
+  ],
+  "bridge": [
+	"You enter the bridge and find the controls are completely fried, but some logs remain that could be useful.",
+	"You enter the bridge and find a crew member with a message from the captain.",
+	"You enter the bridge and find a malfunctioning terminal. You might be able to fix it with some spare parts.",
+  ],
+  "kitchen": [
+	"You enter the kitchen and find some ration packs. They seem to be in good condition.",
+	"You enter the kitchen and find a half-eaten meal. The fridge is still working, though.",
+	"You enter the kitchen and find some burnt food and broken appliances.",
+  ]
+}

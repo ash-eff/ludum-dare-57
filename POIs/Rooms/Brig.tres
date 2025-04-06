@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Room" load_steps=3 format=3 uid="uid://b02yxwyxeurme"]
+
+[ext_resource type="Script" path="res://POIs/RoomOption.gd" id="1_r8w7o"]
+[ext_resource type="Script" path="res://POIs/Room.gd" id="2_5uhv2"]
+
+[resource]
+script = ExtResource("2_5uhv2")
+name = "Brig"
+description = "A smal cell with a toilet and a cot."
+options = Array[ExtResource("1_r8w7o")]([])
