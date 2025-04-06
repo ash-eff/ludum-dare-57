@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Room" load_steps=3 format=3 uid="uid://clnkoy7s55qjd"]
+
+[ext_resource type="Script" path="res://POIs/RoomOption.gd" id="1_1mo7p"]
+[ext_resource type="Script" path="res://POIs/RoomResource.gd" id="2_8juae"]
+
+[resource]
+script = ExtResource("2_8juae")
+name = "Laboratory"
+description = "An unadorned room with a number of computers and scientific equipment."
+options = Array[ExtResource("1_1mo7p")]([])

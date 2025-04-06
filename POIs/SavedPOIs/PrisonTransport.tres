@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="POIResource" load_steps=9 format=3 uid="uid://br02onob87567"]
+
+[ext_resource type="Script" path="res://POIs/RoomResource.gd" id="1_j1uah"]
+[ext_resource type="Script" path="res://POIs/POIResource.gd" id="2_4blpx"]
+[ext_resource type="Resource" uid="uid://bvq6tbbta0lsc" path="res://POIs/Rooms/Bridge.tres" id="2_icph8"]
+[ext_resource type="Resource" uid="uid://ccjn0afsi66ew" path="res://POIs/Rooms/CaptainsQuarters.tres" id="3_fx6y5"]
+[ext_resource type="Resource" uid="uid://cudee75jqowaq" path="res://POIs/Rooms/CrewsQuarters.tres" id="4_xr7ls"]
+[ext_resource type="Resource" uid="uid://c47ygych6aumq" path="res://POIs/Rooms/EngineRoom.tres" id="5_7bb13"]
+[ext_resource type="Resource" uid="uid://dfdopc3cijxal" path="res://POIs/Rooms/MessHall.tres" id="6_os41j"]
+[ext_resource type="Resource" uid="uid://b02yxwyxeurme" path="res://POIs/Rooms/PrisonCell.tres" id="7_g1xaa"]
+
+[resource]
+script = ExtResource("2_4blpx")
+title = "Prison Transport"
+rooms = Array[ExtResource("1_j1uah")]([ExtResource("2_icph8"), ExtResource("3_fx6y5"), ExtResource("4_xr7ls"), ExtResource("5_7bb13"), ExtResource("6_os41j"), ExtResource("7_g1xaa")])

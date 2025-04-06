@@ -30,10 +30,3 @@ func _physics_process(delta):
 	# Move the ship
 	move_and_slide()
 	
-	if Input.is_action_just_pressed("1"):
-		if LocationData.location_data.has("engine room"):
-			var options = LocationData.location_data["engine room"]  # Get the list of options for the location
-			var random_option = options[randi() % options.size()]  # Randomly pick an option
-			print (random_option)
-		else:
-			print("You find nothing of interest here.")

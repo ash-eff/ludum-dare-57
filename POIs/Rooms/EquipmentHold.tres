@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Room" load_steps=3 format=3 uid="uid://bevgm13balyac"]
+
+[ext_resource type="Script" path="res://POIs/RoomOption.gd" id="1_bp3wi"]
+[ext_resource type="Script" path="res://POIs/RoomResource.gd" id="2_mf4ji"]
+
+[resource]
+script = ExtResource("2_mf4ji")
+name = "Equipment Hold"
+description = "A room of various machines for mining ore."
+options = Array[ExtResource("1_bp3wi")]([])

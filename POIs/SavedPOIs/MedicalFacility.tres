@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="POIResource" load_steps=9 format=3 uid="uid://wt55nyjsq3nj"]
+
+[ext_resource type="Resource" uid="uid://bvq6tbbta0lsc" path="res://POIs/Rooms/Bridge.tres" id="2_77g4k"]
+[ext_resource type="Script" path="res://POIs/RoomResource.gd" id="2_d12tx"]
+[ext_resource type="Script" path="res://POIs/POIResource.gd" id="2_kjqgc"]
+[ext_resource type="Resource" uid="uid://ccjn0afsi66ew" path="res://POIs/Rooms/CaptainsQuarters.tres" id="3_xpuh5"]
+[ext_resource type="Resource" uid="uid://cudee75jqowaq" path="res://POIs/Rooms/CrewsQuarters.tres" id="4_3asum"]
+[ext_resource type="Resource" uid="uid://c47ygych6aumq" path="res://POIs/Rooms/EngineRoom.tres" id="5_5mtls"]
+[ext_resource type="Resource" uid="uid://dfdopc3cijxal" path="res://POIs/Rooms/MessHall.tres" id="6_o81ui"]
+[ext_resource type="Resource" uid="uid://djkntnxbuj00e" path="res://POIs/Rooms/SickBay.tres" id="7_w5mva"]
+
+[resource]
+script = ExtResource("2_kjqgc")
+title = "Medical Facility"
+rooms = Array[ExtResource("2_d12tx")]([ExtResource("2_77g4k"), ExtResource("3_xpuh5"), ExtResource("4_3asum"), ExtResource("5_5mtls"), ExtResource("6_o81ui"), ExtResource("7_w5mva")])

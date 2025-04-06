@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="POIResource" load_steps=9 format=3 uid="uid://dbtgaqgq14uk3"]
+
+[ext_resource type="Script" path="res://POIs/POIResource.gd" id="1_c18kj"]
+[ext_resource type="Script" path="res://POIs/RoomResource.gd" id="1_ycgnq"]
+[ext_resource type="Resource" uid="uid://bvq6tbbta0lsc" path="res://POIs/Rooms/Bridge.tres" id="2_rgdvb"]
+[ext_resource type="Resource" uid="uid://ccjn0afsi66ew" path="res://POIs/Rooms/CaptainsQuarters.tres" id="3_damca"]
+[ext_resource type="Resource" uid="uid://cudee75jqowaq" path="res://POIs/Rooms/CrewsQuarters.tres" id="4_rxv5g"]
+[ext_resource type="Resource" uid="uid://c47ygych6aumq" path="res://POIs/Rooms/EngineRoom.tres" id="5_bljjp"]
+[ext_resource type="Resource" uid="uid://clnkoy7s55qjd" path="res://POIs/Rooms/Laboratory.tres" id="6_577ti"]
+[ext_resource type="Resource" uid="uid://dfdopc3cijxal" path="res://POIs/Rooms/MessHall.tres" id="7_0ftop"]
+
+[resource]
+script = ExtResource("1_c18kj")
+title = "Science Station"
+rooms = Array[ExtResource("1_ycgnq")]([ExtResource("2_rgdvb"), ExtResource("3_damca"), ExtResource("4_rxv5g"), ExtResource("5_bljjp"), ExtResource("6_577ti"), ExtResource("7_0ftop")])

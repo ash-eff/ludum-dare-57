@@ -18,7 +18,7 @@ func _ready() -> void:
 
 	space = get_tree().get_root().get_node("Space")
 	nexus_beacon = space.get_node("Nexus")
-	if !space:
+	if !space or !nexus_beacon:
 		return
 	get_beacons()
 

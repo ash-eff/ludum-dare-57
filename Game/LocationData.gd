@@ -12,6 +12,7 @@ func _ready():
 		var result = json.parse(json_data)
 		if result == OK:
 			location_data = json.get_data()
+			SignalBus.location_data_loaded.emit()
 		else:
 			print("Error parsing JSON data")
 	else:

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Room" load_steps=3 format=3 uid="uid://tqashcdivl8e"]
+
+[ext_resource type="Script" path="res://POIs/RoomOption.gd" id="1_4a04a"]
+[ext_resource type="Script" path="res://POIs/RoomResource.gd" id="2_opyou"]
+
+[resource]
+script = ExtResource("2_opyou")
+name = "Luxury Suite"
+description = "A high end cabin for wealthy travelers."
+options = Array[ExtResource("1_4a04a")]([])

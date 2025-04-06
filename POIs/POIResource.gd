@@ -11,8 +11,8 @@ enum adjectives {
 }
 
 @export var title: String = "Unnamed POI"
-@export_multiline var description: String = ""
-@export var rooms: Array[Room]
+@export var rooms: Array[RoomResource]
+
 
 func get_title() -> String:
 	var selected_adjective = adjectives.values().pick_random()

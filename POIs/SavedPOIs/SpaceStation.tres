@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="POIResource" load_steps=8 format=3 uid="uid://bc36ovpvqf8xu"]
+
+[ext_resource type="Script" path="res://POIs/RoomResource.gd" id="1_mlaci"]
+[ext_resource type="Resource" uid="uid://bvq6tbbta0lsc" path="res://POIs/Rooms/Bridge.tres" id="2_8w5kx"]
+[ext_resource type="Script" path="res://POIs/POIResource.gd" id="2_o2cvy"]
+[ext_resource type="Resource" uid="uid://ccjn0afsi66ew" path="res://POIs/Rooms/CaptainsQuarters.tres" id="3_q5jq1"]
+[ext_resource type="Resource" uid="uid://cudee75jqowaq" path="res://POIs/Rooms/CrewsQuarters.tres" id="4_gc5r1"]
+[ext_resource type="Resource" uid="uid://c47ygych6aumq" path="res://POIs/Rooms/EngineRoom.tres" id="5_0ajk1"]
+[ext_resource type="Resource" uid="uid://dfdopc3cijxal" path="res://POIs/Rooms/MessHall.tres" id="6_0eba1"]
+
+[resource]
+script = ExtResource("2_o2cvy")
+title = "Space Station"
+rooms = Array[ExtResource("1_mlaci")]([ExtResource("2_8w5kx"), ExtResource("3_q5jq1"), ExtResource("4_gc5r1"), ExtResource("5_0ajk1"), ExtResource("6_0eba1")])

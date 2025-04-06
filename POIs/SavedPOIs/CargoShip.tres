@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="POIResource" load_steps=9 format=3 uid="uid://jxqstqnwof1h"]
+
+[ext_resource type="Script" path="res://POIs/RoomResource.gd" id="1_xniwu"]
+[ext_resource type="Resource" uid="uid://bvq6tbbta0lsc" path="res://POIs/Rooms/Bridge.tres" id="2_drug6"]
+[ext_resource type="Script" path="res://POIs/POIResource.gd" id="2_q8sx3"]
+[ext_resource type="Resource" uid="uid://dgfcr02xfcdqh" path="res://POIs/Rooms/CargoBay.tres" id="3_jidrc"]
+[ext_resource type="Resource" uid="uid://ccjn0afsi66ew" path="res://POIs/Rooms/CaptainsQuarters.tres" id="4_02n3b"]
+[ext_resource type="Resource" uid="uid://cudee75jqowaq" path="res://POIs/Rooms/CrewsQuarters.tres" id="5_1qqe1"]
+[ext_resource type="Resource" uid="uid://c47ygych6aumq" path="res://POIs/Rooms/EngineRoom.tres" id="6_0p1px"]
+[ext_resource type="Resource" uid="uid://dfdopc3cijxal" path="res://POIs/Rooms/MessHall.tres" id="7_4xcej"]
+
+[resource]
+script = ExtResource("2_q8sx3")
+title = "Cargo Ship"
+rooms = Array[ExtResource("1_xniwu")]([ExtResource("2_drug6"), ExtResource("3_jidrc"), ExtResource("4_02n3b"), ExtResource("5_1qqe1"), ExtResource("6_0p1px"), ExtResource("7_4xcej")])

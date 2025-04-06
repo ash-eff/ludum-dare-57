@@ -1,17 +1,78 @@
 {
-  "engine room": [
-	"You explore the engine room and find a dead body holding a case. You open the box.",
-	"You explore the engine room and find a seized engine, however, there are a few parts you can salvage, but it will take some time to remove them.",
-	"You explore the engine room and find one lone crew member. They seem unconscious.",
+  "Bridge": [
+	"The ship's main controls are receiving distress signals from an unknown source. The messages are fragmented and cryptic, but you are able to decrypt the pirate signal and now understand why there are no survivors aboard this ship.",
+	"The captain's logs reveal plans for a potential mutiny among the crew. Cross-referencing with other data confirms the mutiny did occur—and was successful.",
+	"An unknown entity has taken control of the ship's navigation systems. It keeps calling you 'Dave.' You trace the signal and isolate the interference, regaining limited control. Best to take your loot and leave before it reacquires control and, I don't know, sucks all the oxygen out of the ship.",
+	"The ship is hailed by an alien vessel demanding an audience. After a tense exchange where you are pretty sure you just agreed to marry the alien captain's daughter, they beam a cache of goods aboard.",
+	"Upon finding the captain's logs, you discover in the final log that the ship was set to approach an anomaly 550 light-years away from the ship's current position. Looks like only the ship made it through."
   ],
-  "bridge": [
-	"You enter the bridge and find the controls are completely fried, but some logs remain that could be useful.",
-	"You enter the bridge and find a crew member with a message from the captain.",
-	"You enter the bridge and find a malfunctioning terminal. You might be able to fix it with some spare parts.",
+  "Cargo Bay": [
+	"While inspecting the cargo, a hidden compartment is discovered containing a stowaway. The stowaway is alive but unconscious. Her identification card says she has a brother somewhere who is a very talented doctor.",
+	"A recent cargo delivery shows signs of contamination. Fortunately, you didn't remove your helmet before exploring the cargo bay. The goop on the floor indicates that the crew was not so lucky.",
+	"Unbeknownst to the now-dead crew, one of the cargo containers holds volatile explosives. You carefully disable the rigged detonators and secure the container.",
+	"An ancient artifact is found hidden among the cargo, emitting strange energy readings. Scanning it reveals that it is a child's toy from an alien race. The warning on the label says that it could cause human heads to explode after prolonged exposure. Best to leave it alone.",
+	"A fire breaks out in the cargo bay, threatening the ship's integrity. You activate emergency foam systems and extinguish the blaze just in time to save the abandoned ship you are stealing from. What a hero."
   ],
-  "kitchen": [
-	"You enter the kitchen and find some ration packs. They seem to be in good condition.",
-	"You enter the kitchen and find a half-eaten meal. The fridge is still working, though.",
-	"You enter the kitchen and find some burnt food and broken appliances.",
+  "Captain's Quarters": [
+	"Aside from the dead body, the room is pristine, as if untouched by the chaos outside. A half-written letter on the captain’s desk reveals their plans to abandon the ship alone. The dead body in the corner with the captain's hat on and a giant hole in his chest suggests the crew didn't take kindly to this notion.",
+	"Personal video logs detail the captain's growing paranoia. The final entry ends mid-sentence, interrupted by an alarm. The captain is then swept out of frame for what you hope is a tickle fight. Crazed, space-sick crew members are known for tickle fights, right!?",
+	"A shattered display case lies on the floor, its contents missing. Among the debris, you find a hidden compartment containing a forbidden relic—a golden puzzle box that you think might be a fun toy for your nephew.",
+	"You discover a wall-mounted safe, long since forced open. Scorch marks and dried blood suggest a struggle took place over whatever was inside. On the wall next to the safe, you find a key that seems to fit the safe lock. Not a very smart crew.",
+	"The captain’s uniform hangs neatly, untouched, but a data pad on the captain's desk plays a looping message: 'Forgive me, I tried to save them.'"
+  ],
+  "Crew's Quarters": [
+	"You find two crew members' corpses stacked in the corner and a flipped-over game of Monopoly on the floor. No sign of the third crew member.",
+	"A diary reveals a secret romance that could disrupt crew dynamics. You leave the diary in place, but now you understand the tension among crew members and what may have transpired on the ship. Under the diary, you find a pretty nice drawing of a couple riding a unicorn. Might go nicely in your ship.",
+	"You hear strange noises at night, originating from a seemingly empty room. You investigate and uncover a hidden crawlspace used for smuggling.",
+	"According to ship logs, a mysterious illness spread among the crew. Your investigation leads to the chef's quarters. He was not a very clean person. Lots of used band-aids lying around.",
+	"Evidence of unauthorized experiments is found hidden under a mattress. You document the findings and lock them in the ship’s data archive. When will people learn that human-raccoon hybrids are not going to work?"
+  ],
+  "Engine Room": [
+	"The engine is leaking plasma coolant, threatening a core meltdown. You reroute the pressure and seal the rupture in time. Another heroic victory for the thief who steals from the dead.",
+	"You find an expired crew member trapped under a collapsed maintenance shaft. It looks like he was trying to repair the life support systems. Better keep your helmet on.",
+	"Strange growths are spreading near the reactor core. You take samples, revealing that the organism feeds off radiation. You realize that your skin has been rather itchy since you entered the ship. Best to gather the goods and split.",
+	"The engine hum changes pitch intermittently, as if responding to something. A spectral scan uncovers harmonic interference from a distant source. This sounds made-up and means nothing to you. Moving on.",
+	"A black box is discovered wedged behind a panel, containing unauthorized engine logs. Reviewing them reveals engine modifications meant to evade sensors. It also indicates that power to these modifications was pulled from life support. Good call."
+  ],
+  "Equipment Hold": [
+	"Supplies are missing and appear to have been rerouted without authorization. A manifest check reveals they were redirected to unauthorized locations. Looks like you just missed all the good stuff.",
+	"You discover prototype tech stashed away, not in the manifest. Activation logs show it was tested in secret by unknown crew members. Testing unknown tech in the vacuum of space always ends well.",
+	"The floor is slick with oil. Following the trail, you find a hidden hatch. Opening it reveals more oil. You found the oil reserves. You should have been a detective.",
+	"A dormant robotic unit powers on suddenly and wails out in great pain. A human is inside—or the remains of a human, at least. You decide to let OCP handle this one and power it off to spare the poor soul.",
+	"You find a case of valuable tools. Leaning on past experience, you check—and sure enough, you notice it's booby-trapped, preventing the loss of another finger. Fool me twice, shame on me..."
+  ],
+  "Laboratory": [
+	"Test samples have mutated into something hostile and are no longer contained. You duct tape an M240 Incinerator Unit to an M41A Pulse Rifle and get to work.",
+	"Lab logs show experiments on human enhancement that were never approved. You encrypt the data and flag it for review by command authority. What's with the human-raccoon hybrid obsession?",
+	"A sealed container glows faintly and pulses in response to nearby movement. Upon opening, you find a slimy, egg-shaped container. It begins to open. No thanks. You should take your loot and leave.",
+	"Some of the researchers left behind what appear to be messages in chemical compounds on the wall. You break out the black light, and after analysis, the 'messages' reveal incredible boredom. Many games of tic-tac-toe and hangman.",
+	"An AI system activates and asks you riddles in order to unlock critical lab data. Instead of answering the riddles, you take the opportunity to ask how to center a <div>."
+  ],
+  "Luxury Suite": [
+	"A lavish room that’s eerily untouched, perhaps reserved for someone important. You check the reservation log. Nope. Just a celebrity.",
+	"You find a very fancy room with many expensive items. A reminder that when you die, you can't take it with you. Good thing you're alive! Get to looting!",
+	"You find a large mirror in the room, however you don't see your reflection. Maybe you're a vampire? Upon further inspection, it is a false mirror with a hidden camera behind it. Not as exciting as being a vampire.",
+	"You find evidence that a VIP died mysteriously in this very room. Security footage reveals their wife got the room's TV rental bill."
+  ],
+  "Mess Hall": [
+	"The mess hall is a wreck—food everywhere, and signs of panic. Security footage shows the crew in a food fight. Makes sense that they died of starvation...",
+	"A stash of ration bars is found inside a vent. They seem to have been hoarded. You consider eating them, but they contain coconut. Gross.",
+	"You find the room decorated for a birthday, but the party seems to have been abandoned before cutting the cake—the candles long melted into the icing. Still, no sense in letting it go to waste...",
+	"The smell of fresh food lingers, but the place is clearly abandoned. Your scan detects automated cookers still cycling through preset routines. Just don't ask where the meat comes from...",
+	"A small message carved into a table reads, 'No fate.' With a marker, you complete the sentence with '...but what we make.'"
+  ],
+  "Prison Cell": [
+	"The cell door is forced open from the inside—no sign of the prisoners, only a few personal effects of John Mason and Stanley Goodspeed.",
+	"You find journal pages from a prisoner who claimed they were innocent and framed. Everybody in here is innocent. Didn't you know that?",
+	"Blood stains mark the cell floor indicating a violent escape. Upon further investigation, it turns out the blood stains are ketchup. Oldest trick in the book.",
+	"A prisoner skeleton is slumped in the corner, clutching something tightly. Who knows what it is? Touching skeletons is gross.",
+	"The surveillance system shows footage of someone entering the cell... but no one leaving. You investigate the cell and note that it's empty—except for a poster of Raquel Welch on the wall."
+  ],
+  "Sick Bay": [
+	"The lights flicker and medical bots repeat the phrase 'treatment failed.' A system reboot reveals logs of patients who never checked out. Who knew robots as doctors would end in tragedy?",
+	"A cryopod hums softly with something still alive inside. You check, and the lock is set to open in the year 3000. Philip, is that you?",
+	"Medical records show every patient treated here mysteriously vanished after recovery. You find a pattern linking all disappearances to a Dr. Rumack—but that's not important right now.",
+	"You find a cure labeled 'Cobretti.' Wonder what it's a cure for?",
+	"The intercom crackles with a looped recording of a nurse's final plea: 'I am not Mexican, or Puerto Rican, I am Dominican!' Further logs indicate this nurse was the only survivor, having jettisoned in an escape pod. Long live Nurse Espinosa."
   ]
 }

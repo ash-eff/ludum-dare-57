@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="RoomResource" load_steps=2 format=3 uid="uid://dgfcr02xfcdqh"]
+
+[ext_resource type="Script" path="res://POIs/RoomResource.gd" id="1_k1g4u"]
+
+[resource]
+script = ExtResource("1_k1g4u")
+name = "Cargo Bay"
+description = "A large room for storing cargo for transport."

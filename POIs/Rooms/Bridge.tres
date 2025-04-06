@@ -1,10 +1,8 @@
-[gd_resource type="Resource" script_class="Room" load_steps=3 format=3 uid="uid://bvq6tbbta0lsc"]
+[gd_resource type="Resource" script_class="RoomResource" load_steps=2 format=3 uid="uid://bvq6tbbta0lsc"]
 
-[ext_resource type="Script" path="res://POIs/RoomOption.gd" id="1_sa038"]
-[ext_resource type="Script" path="res://POIs/Room.gd" id="2_uu0we"]
+[ext_resource type="Script" path="res://POIs/RoomResource.gd" id="1_uyfj7"]
 
 [resource]
-script = ExtResource("2_uu0we")
-name = "Command Deck"
+script = ExtResource("1_uyfj7")
+name = "Bridge"
 description = "The command room for the ship. "
-options = Array[ExtResource("1_sa038")]([])
