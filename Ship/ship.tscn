@@ -1,21 +1,61 @@
-[gd_scene load_steps=5 format=3 uid="uid://bavp26qu64ff0"]
+[gd_scene load_steps=13 format=3 uid="uid://bavp26qu64ff0"]
 
 [ext_resource type="Script" path="res://Ship/ship.gd" id="1_k48wp"]
 [ext_resource type="Texture2D" uid="uid://d1ugsu6d07xeu" path="res://Art/space_ship.png" id="2_7mx76"]
 [ext_resource type="PackedScene" uid="uid://d0ui7ih1kpgry" path="res://Beacons/beacon_tracker.tscn" id="3_3a6gq"]
-[ext_resource type="PackedScene" uid="uid://ciho4ru7fdts1" path="res://player_ui.tscn" id="4_tdyfk"]
+[ext_resource type="PackedScene" uid="uid://ciho4ru7fdts1" path="res://GUI/player_ui.tscn" id="4_tdyfk"]
+[ext_resource type="Script" path="res://Ship/fuel_component.gd" id="5_d3ybo"]
+[ext_resource type="PackedScene" uid="uid://6jn0a67478ek" path="res://StateMachine/state_machine.tscn" id="6_wwmvs"]
+[ext_resource type="Script" path="res://StateMachine/States/space_state.gd" id="7_hvqcp"]
+[ext_resource type="Script" path="res://StateMachine/States/ui_state.gd" id="8_3nyi5"]
+[ext_resource type="Script" path="res://StateMachine/States/dead_state.gd" id="9_1bkpu"]
+[ext_resource type="Script" path="res://Ship/hull_component.gd" id="10_e1u2l"]
 
-[node name="Ship" type="CharacterBody2D" node_paths=PackedStringArray("player_ui")]
+[sub_resource type="CircleShape2D" id="CircleShape2D_yfbpu"]
+radius = 28.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1wsuo"]
+radius = 29.0
+
+[node name="Ship" type="CharacterBody2D" node_paths=PackedStringArray("player_ui", "fuel", "state_machine")]
 script = ExtResource("1_k48wp")
 player_ui = NodePath("Player UI/Player UI")
+fuel = NodePath("FuelComponent")
+state_machine = NodePath("StateMachine")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yfbpu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_7mx76")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+process_callback = 0
 
 [node name="BeaconTracker" parent="." instance=ExtResource("3_3a6gq")]
 
 [node name="Player UI" parent="." instance=ExtResource("4_tdyfk")]
+
+[node name="FuelComponent" type="Node2D" parent="."]
+script = ExtResource("5_d3ybo")
+
+[node name="StateMachine" parent="." instance=ExtResource("6_wwmvs")]
+
+[node name="SpaceState" type="Node" parent="StateMachine"]
+script = ExtResource("7_hvqcp")
+
+[node name="UIState" type="Node" parent="StateMachine"]
+script = ExtResource("8_3nyi5")
+
+[node name="DeadState" type="Node" parent="StateMachine"]
+script = ExtResource("9_1bkpu")
+
+[node name="HullComponent" type="Area2D" parent="."]
+script = ExtResource("10_e1u2l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HullComponent"]
+shape = SubResource("CircleShape2D_1wsuo")
+
+[connection signal="area_entered" from="HullComponent" to="HullComponent" method="_on_area_entered"]
 
 [editable path="Player UI"]

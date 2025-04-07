@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cfq5x2w7aac75" path="res://Nexus/nexus.tscn" id="2_8go1f"]
 [ext_resource type="PackedScene" uid="uid://bavp26qu64ff0" path="res://Ship/ship.tscn" id="2_yw02y"]
 [ext_resource type="PackedScene" uid="uid://4gb76ptpt7vy" path="res://Space/starfield.tscn" id="3_fpg17"]
-[ext_resource type="PackedScene" uid="uid://cxapn6ifaht7i" path="res://POIGUI.tscn" id="6_07ikl"]
+[ext_resource type="PackedScene" uid="uid://cxapn6ifaht7i" path="res://GUI/POIGUI.tscn" id="6_07ikl"]
 [ext_resource type="PackedScene" uid="uid://cbso1q7gtu0yl" path="res://POIs/SavedPOIs/point_of_interest.tscn" id="6_se4gq"]
 [ext_resource type="Resource" uid="uid://wt55nyjsq3nj" path="res://POIs/SavedPOIs/MedicalFacility.tres" id="7_l1fsa"]
 
@@ -13,19 +13,15 @@ script = ExtResource("1_vtnlf")
 
 [node name="Nexus" parent="." instance=ExtResource("2_8go1f")]
 
-[node name="Ship" parent="." instance=ExtResource("2_yw02y")]
-
 [node name="Starfield" parent="." instance=ExtResource("3_fpg17")]
 
 [node name="PointOfInterest" parent="." instance=ExtResource("6_se4gq")]
+position = Vector2(422, -256)
 poi_ui_scene = ExtResource("6_07ikl")
 POI_resource = ExtResource("7_l1fsa")
 
-[node name="UI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="UI" type="CanvasLayer" parent="."]
 metadata/_edit_use_anchors_ = true
+
+[node name="Ship" parent="." instance=ExtResource("2_yw02y")]
+position = Vector2(-168, 131)

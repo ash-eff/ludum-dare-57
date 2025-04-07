@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="LootTableResource" load_steps=2 format=3 uid="uid://bp7m4ygslm7l0"]
 
-[ext_resource type="Script" path="res://LootTableResource.gd" id="1_jimyx"]
+[ext_resource type="Script" path="res://Game/LootTableResource.gd" id="1_jimyx"]
 
 [resource]
 script = ExtResource("1_jimyx")

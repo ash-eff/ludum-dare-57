@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://hfrk8g0abhjr"]
+
+[ext_resource type="Texture2D" uid="uid://d0j10lxeoijlc" path="res://Art/loading_dock_sign.png" id="1_j87df"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcfv7"]
+atlas = ExtResource("1_j87df")
+region = Rect2(0, 0, 68, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmy1w"]
+atlas = ExtResource("1_j87df")
+region = Rect2(68, 0, 68, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbxma"]
+atlas = ExtResource("1_j87df")
+region = Rect2(136, 0, 68, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcne8"]
+atlas = ExtResource("1_j87df")
+region = Rect2(204, 0, 68, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqdc4"]
+atlas = ExtResource("1_j87df")
+region = Rect2(272, 0, 68, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6jjh"]
+atlas = ExtResource("1_j87df")
+region = Rect2(340, 0, 68, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6cl8"]
+atlas = ExtResource("1_j87df")
+region = Rect2(408, 0, 68, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0fxn"]
+atlas = ExtResource("1_j87df")
+region = Rect2(476, 0, 68, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fluqi"]
+atlas = ExtResource("1_j87df")
+region = Rect2(544, 0, 68, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brfbl"]
+atlas = ExtResource("1_j87df")
+region = Rect2(612, 0, 68, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f0et"]
+atlas = ExtResource("1_j87df")
+region = Rect2(680, 0, 68, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_duduf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcfv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmy1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbxma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcne8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqdc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6jjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6cl8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0fxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fluqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brfbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6f0et")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DockingStation" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_duduf")
+autoplay = "default"
+frame_progress = 0.756066

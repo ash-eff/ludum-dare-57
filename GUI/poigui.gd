@@ -26,15 +26,19 @@ var rand_dice_value
 var first_room: RoomResource
 var second_room: RoomResource
 var third_room: RoomResource
+var poi: PointOfInterest
 
 func _ready() -> void:
 	SignalBus.close_poi_gui.connect(on_close_gui)
+	SignalBus.loot_selected.connect(on_loot_selected)
+
+func set_poi(_poi):
+	poi = _poi
 
 func show_docking_ui(title: String, description: String, _first_room: RoomResource, 
 	_second_room: RoomResource, _third_room: RoomResource):
 	docking_ui.visible = true
 	docking_title.text = title
-	docking_description.text = description
 	first_room = _first_room
 	second_room = _second_room
 	third_room = _third_room
@@ -78,7 +82,10 @@ func roll_dice():
 	timer2.timeout.connect(_on_stop_roll)
 	add_child(timer2)
 	timer2.start()
-	
+
+func cancel_dock():
+	docking_ui.visible = false
+
 func _on_roll_tick():
 	dice_label.text = str(randi_range(1, 12))
 	
@@ -88,7 +95,7 @@ func _on_stop_roll():
 	var outcome_text = ''
 	match rand_dice_value:
 		1:
-			outcome_text = "You lose 1 morale and flee back to your ship."
+			outcome_text = "Something about this place doesn't sit right with you. You lose 1 morale and flee back to your ship."
 			SignalBus.lose_morale.emit(1)
 		2:
 			outcome_text = "Navigating the wreckage proved to be difficult. You lose 1 fuel."
@@ -113,16 +120,18 @@ func _on_stop_roll():
 	accept_outcome_button.disabled = false
 
 func _on_enter_button_pressed() -> void:
+	SignalBus.ship_docked.emit()
 	show_dice_ui()
-
-func _on_leave_button_pressed() -> void:
-	pass # Replace with function body.
 
 func _on_roll_dice_button_pressed() -> void:
 	roll_dice()
 
 func _on_accept_outcome_button_pressed() -> void:
 	dice_ui.visible = false
+	if rand_dice_value == 1:
+		poi.lock_poi()
+		SignalBus.ship_undocked.emit()
+		on_close_gui()
 	show_room_ui()
 
 func _on_room_card_one_gui_input(event: InputEvent) -> void:
@@ -137,5 +146,10 @@ func _on_room_card_3_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		show_outcome_ui(third_room)
 
+func on_loot_selected():
+	await get_tree().create_timer(1).timeout
+	on_close_gui()
+
 func on_close_gui():
+	poi.is_locked = true
 	queue_free()

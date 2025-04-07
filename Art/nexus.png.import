@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1ugsu6d07xeu"
-path="res://.godot/imported/space_ship.png-fcef588e71bd90a0b2a157ea23f56c6d.ctex"
+uid="uid://b6rkstc0yu121"
+path="res://.godot/imported/nexus.png-b3d559087af9fc58aabe63e5b7745344.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/space_ship.png"
-dest_files=["res://.godot/imported/space_ship.png-fcef588e71bd90a0b2a157ea23f56c6d.ctex"]
+source_file="res://Art/nexus.png"
+dest_files=["res://.godot/imported/nexus.png-b3d559087af9fc58aabe63e5b7745344.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

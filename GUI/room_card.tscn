@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://1jl4h0r7ybn4"]
+[gd_scene load_steps=3 format=3 uid="uid://dy5pqvp34uvpj"]
 
-[ext_resource type="Script" path="res://loot_card.gd" id="1_mjugp"]
+[ext_resource type="Script" path="res://GUI/room_card.gd" id="1_0etql"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_isqga"]
 bg_color = Color(0.393303, 0.655497, 0.636598, 1)
@@ -13,11 +13,11 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[node name="LootCard" type="Panel"]
-custom_minimum_size = Vector2(194, 186)
+[node name="RoomCard" type="Panel"]
+custom_minimum_size = Vector2(194, 290)
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_isqga")
-script = ExtResource("1_mjugp")
+script = ExtResource("1_0etql")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -27,11 +27,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LootDescription" type="Label" parent="VBoxContainer"]
+[node name="Room Title" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 5.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[node name="Room Description" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 6.0
+autowrap_mode = 2

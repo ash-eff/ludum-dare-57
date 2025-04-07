@@ -1,6 +1,7 @@
 extends Panel
 
 @onready var loot_description = $VBoxContainer/LootDescription
+@onready var cover = $ColorRect
 var loot
 var amount
 
@@ -25,4 +26,5 @@ func _on_gui_input(event: InputEvent) -> void:
 				SignalBus.add_scrap.emit(amount)
 			"survivor":
 				SignalBus.add_morale.emit(amount)
-		SignalBus.close_poi_gui.emit()
+		cover.visible = false
+		SignalBus.loot_selected.emit()

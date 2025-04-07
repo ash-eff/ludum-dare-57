@@ -31,9 +31,13 @@ func _process(delta: float) -> void:
 func get_beacons():
 	beacons.clear()
 	tracked_beacons.clear()
-	for node in space.get_children():
-		if node is Beacon:
-			beacons.append(node)
+
+	var found_beacons = space.find_children("*", "Beacon", true, false)
+	for beacon in found_beacons:
+		if beacon.get_parent() is Nexus:
+			continue
+		beacons.append(beacon)
+
 			
 func scan_beacon():
 	tracked_beacons.clear()

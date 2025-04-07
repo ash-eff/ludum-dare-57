@@ -1,6 +1,7 @@
 class_name PlayerUI
 extends Control
 
+@onready var hull_health_value = $"VBoxContainer/HullHealth/Hull Health Value"
 @onready var health_value = $"VBoxContainer/Health/Health Value"
 @onready var fuel_value = $"VBoxContainer/Fuel/Fuel Value"
 @onready var food_value = $"VBoxContainer/Food/Food Value"
@@ -21,3 +22,6 @@ func set_morale_value(value):
 	
 func set_scrap_value(value):
 	scrap_value.text = str(value)
+
+func set_hull_health_value(value):
+	hull_health_value.text = str(value)

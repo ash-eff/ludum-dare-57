@@ -1,18 +1,52 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfq5x2w7aac75"]
+[gd_scene load_steps=12 format=3 uid="uid://cfq5x2w7aac75"]
 
 [ext_resource type="Script" path="res://Nexus/nexus.gd" id="1_jj4m6"]
+[ext_resource type="PackedScene" uid="uid://c18wi2ko3behj" path="res://GUI/NexusGUI.tscn" id="2_3ryf6"]
 [ext_resource type="PackedScene" uid="uid://bdxgrlh8ecd6f" path="res://Beacons/beacon.tscn" id="2_c5rnq"]
+[ext_resource type="Texture2D" uid="uid://b6rkstc0yu121" path="res://Art/nexus.png" id="3_kv614"]
 [ext_resource type="Texture2D" uid="uid://be8kv0iliu7nx" path="res://Art/arrow2.png" id="3_mc4nb"]
+[ext_resource type="PackedScene" uid="uid://hfrk8g0abhjr" path="res://docking_station.tscn" id="4_d5wd0"]
+[ext_resource type="PackedScene" uid="uid://dubj0v7gy5y4u" path="res://hitbox.tscn" id="7_7l30r"]
+[ext_resource type="PackedScene" uid="uid://dgvs3u5ex1o6b" path="res://collision_box.tscn" id="8_fhmdb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_giaje"]
+radius = 38.16
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kduqg"]
+size = Vector2(125, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlvid"]
+size = Vector2(126, 126)
 
 [node name="Nexus" type="Node2D"]
 script = ExtResource("1_jj4m6")
+nexus_ui_scene = ExtResource("2_3ryf6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_kv614")
 
 [node name="Beacon" parent="." instance=ExtResource("2_c5rnq")]
 
-[node name="Sprite2D" parent="Beacon" index="0"]
-scale = Vector2(1, 1)
-
-[node name="ArrowSprite" parent="Beacon" index="1"]
+[node name="ArrowSprite" parent="Beacon" index="0"]
 texture = ExtResource("3_mc4nb")
+
+[node name="DockingStation" parent="." instance=ExtResource("4_d5wd0")]
+position = Vector2(215, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DockingStation"]
+shape = SubResource("CircleShape2D_giaje")
+
+[node name="Hitbox" parent="." instance=ExtResource("7_7l30r")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_kduqg")
+
+[node name="CollisionBox" parent="." instance=ExtResource("8_fhmdb")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBox"]
+shape = SubResource("RectangleShape2D_vlvid")
+
+[connection signal="body_entered" from="DockingStation" to="." method="_on_docking_station_entered"]
+[connection signal="body_exited" from="DockingStation" to="." method="_on_docking_station_exited"]
 
 [editable path="Beacon"]

@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://1jl4h0r7ybn4"]
+
+[ext_resource type="Script" path="res://GUI/loot_card.gd" id="1_mjugp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_isqga"]
+bg_color = Color(0.393303, 0.655497, 0.636598, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="LootCard" type="Panel"]
+custom_minimum_size = Vector2(194, 186)
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_isqga")
+script = ExtResource("1_mjugp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LootDescription" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 5.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.121529, 0.249187, 0.240148, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -11.5
+offset_right = 21.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "LOOT"
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
