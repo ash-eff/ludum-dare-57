@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="RoomResource" load_steps=2 format=3 uid="uid://bvq6tbbta0lsc"]
+[gd_resource type="Resource" script_class="RoomResource" load_steps=3 format=3 uid="uid://bvq6tbbta0lsc"]
 
+[ext_resource type="Resource" uid="uid://delbabrop0urt" path="res://LootTables/BridgeLootTable.tres" id="1_dqdew"]
 [ext_resource type="Script" path="res://POIs/RoomResource.gd" id="1_uyfj7"]
 
 [resource]
 script = ExtResource("1_uyfj7")
 name = "Bridge"
 description = "The command room for the ship. "
+loot_table = ExtResource("1_dqdew")

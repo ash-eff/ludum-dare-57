@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Room" load_steps=3 format=3 uid="uid://bevgm13balyac"]
+[gd_resource type="Resource" script_class="RoomResource" load_steps=3 format=3 uid="uid://bevgm13balyac"]
 
-[ext_resource type="Script" path="res://POIs/RoomOption.gd" id="1_bp3wi"]
+[ext_resource type="Resource" uid="uid://v77v74a6q7ak" path="res://LootTables/EquipmentLootTable.tres" id="1_rwjmp"]
 [ext_resource type="Script" path="res://POIs/RoomResource.gd" id="2_mf4ji"]
 
 [resource]
 script = ExtResource("2_mf4ji")
-name = "Equipment Hold"
-description = "A room of various machines for mining ore."
-options = Array[ExtResource("1_bp3wi")]([])
+name = "Equipment Room"
+description = "A room for mining equipment and tools."
+loot_table = ExtResource("1_rwjmp")

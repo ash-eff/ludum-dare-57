@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="LootTableResource" load_steps=2 format=3 uid="uid://cmf6uo6d0mh7u"]
+
+[ext_resource type="Script" path="res://LootTableResource.gd" id="1_bcuuj"]
+
+[resource]
+script = ExtResource("1_bcuuj")
+loot_table = [{
+"item": "medicine",
+"weight": 10
+}, {
+"item": "fuel",
+"weight": 10
+}, {
+"item": "food",
+"weight": 40
+}, {
+"item": "scrap",
+"weight": 39
+}, {
+"item": "survivor",
+"weight": 1
+}]

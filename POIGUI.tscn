@@ -1,0 +1,259 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxapn6ifaht7i"]
+
+[ext_resource type="Script" path="res://poigui.gd" id="1_n228o"]
+[ext_resource type="PackedScene" uid="uid://dy5pqvp34uvpj" path="res://room_card.tscn" id="1_shp81"]
+[ext_resource type="PackedScene" uid="uid://1jl4h0r7ybn4" path="res://loot_card.tscn" id="2_fglsx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sblb6"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="POI Interface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n228o")
+
+[node name="Docking GUI" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sblb6")
+
+[node name="MarginContainer" type="MarginContainer" parent="Docking GUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Docking GUI/MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Docking GUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Description" type="Label" parent="Docking GUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Docking GUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Enter Button" type="Button" parent="Docking GUI/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Enter"
+
+[node name="Leave Button" type="Button" parent="Docking GUI/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Leave"
+
+[node name="Dice GUI" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sblb6")
+
+[node name="MarginContainer" type="MarginContainer" parent="Dice GUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dice GUI/MarginContainer"]
+layout_mode = 2
+
+[node name="Entering Lable" type="Label" parent="Dice GUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "ENTERING"
+horizontal_alignment = 1
+
+[node name="Dice Label" type="Label" parent="Dice GUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Outcome LAbel" type="Label" parent="Dice GUI/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="RollDiceButton" type="Button" parent="Dice GUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Roll Dice
+"
+
+[node name="AcceptOutcomeButton" type="Button" parent="Dice GUI/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Ok"
+
+[node name="Room GUI" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sblb6")
+
+[node name="MarginContainer" type="MarginContainer" parent="Room GUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Room GUI/MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Room GUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Select a room."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Room GUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+alignment = 1
+
+[node name="RoomCard" parent="Room GUI/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_shp81")]
+layout_mode = 2
+
+[node name="RoomCard2" parent="Room GUI/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_shp81")]
+layout_mode = 2
+
+[node name="RoomCard3" parent="Room GUI/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("1_shp81")]
+layout_mode = 2
+
+[node name="Outcome GUI" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sblb6")
+
+[node name="MarginContainer" type="MarginContainer" parent="Outcome GUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Outcome GUI/MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Outcome GUI/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+text = "Room Description"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Outcome GUI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+alignment = 1
+
+[node name="LootCard" parent="Outcome GUI/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_fglsx")]
+layout_mode = 2
+
+[node name="LootCard2" parent="Outcome GUI/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_fglsx")]
+layout_mode = 2
+
+[node name="LootCard3" parent="Outcome GUI/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_fglsx")]
+layout_mode = 2
+
+[connection signal="pressed" from="Docking GUI/MarginContainer/VBoxContainer/HBoxContainer/Enter Button" to="." method="_on_enter_button_pressed"]
+[connection signal="pressed" from="Docking GUI/MarginContainer/VBoxContainer/HBoxContainer/Leave Button" to="." method="_on_leave_button_pressed"]
+[connection signal="pressed" from="Dice GUI/MarginContainer/VBoxContainer/RollDiceButton" to="." method="_on_roll_dice_button_pressed"]
+[connection signal="pressed" from="Dice GUI/MarginContainer/VBoxContainer/AcceptOutcomeButton" to="." method="_on_accept_outcome_button_pressed"]
+[connection signal="gui_input" from="Room GUI/MarginContainer/VBoxContainer/HBoxContainer/RoomCard" to="." method="_on_room_card_one_gui_input"]
+[connection signal="gui_input" from="Room GUI/MarginContainer/VBoxContainer/HBoxContainer/RoomCard2" to="." method="_on_room_card_2_gui_input"]
+[connection signal="gui_input" from="Room GUI/MarginContainer/VBoxContainer/HBoxContainer/RoomCard3" to="." method="_on_room_card_3_gui_input"]

@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="Room" load_steps=3 format=3 uid="uid://djkntnxbuj00e"]
+[gd_resource type="Resource" script_class="RoomResource" load_steps=3 format=3 uid="uid://djkntnxbuj00e"]
 
-[ext_resource type="Script" path="res://POIs/RoomOption.gd" id="1_18g6p"]
+[ext_resource type="Resource" uid="uid://c54j8xphjr430" path="res://LootTables/SickbayLootTable.tres" id="1_aqntv"]
 [ext_resource type="Script" path="res://POIs/RoomResource.gd" id="2_dxkh7"]
 
 [resource]
 script = ExtResource("2_dxkh7")
 name = "Sick Bay"
-description = "A medical room for treating the wounded and ill."
-options = Array[ExtResource("1_18g6p")]([])
+description = "A medical room from treating the injured and ill."
+loot_table = ExtResource("1_aqntv")

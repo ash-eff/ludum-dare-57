@@ -12,6 +12,7 @@ func _ready():
 		var result = json.parse(json_data)
 		if result == OK:
 			location_data = json.get_data()
+			await get_tree().create_timer(.25).timeout
 			SignalBus.location_data_loaded.emit()
 		else:
 			print("Error parsing JSON data")

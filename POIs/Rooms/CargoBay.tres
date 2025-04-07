@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="RoomResource" load_steps=2 format=3 uid="uid://dgfcr02xfcdqh"]
+[gd_resource type="Resource" script_class="RoomResource" load_steps=3 format=3 uid="uid://dgfcr02xfcdqh"]
 
 [ext_resource type="Script" path="res://POIs/RoomResource.gd" id="1_k1g4u"]
+[ext_resource type="Resource" uid="uid://cv2m2yag3gjy0" path="res://LootTables/CargoLootTable.tres" id="1_yass5"]
 
 [resource]
 script = ExtResource("1_k1g4u")
 name = "Cargo Bay"
 description = "A large room for storing cargo for transport."
+loot_table = ExtResource("1_yass5")
